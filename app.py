@@ -1,0 +1,12 @@
+from flask import Flask, jsonify
+
+app = Flask(__name__)
+app.config['DEBUG'] = True
+#first endpoint or route in flask
+@app.route('/') #http://www.mysite.com/blog
+def home():
+    return jsonify({'message': 'Hello, world!'})
+
+
+if __name__ == '__main__':
+    app.run()
